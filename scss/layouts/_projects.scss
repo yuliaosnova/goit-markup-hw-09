@@ -142,12 +142,13 @@
             0px 4px 4px rgba(0, 0, 0, 0.06),
             1px 4px 6px rgba(0, 0, 0, 0.16);
     }
-
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+   
+     @include mq (tablet-only) {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+     }
 }
-
 
 
 .project__title {
