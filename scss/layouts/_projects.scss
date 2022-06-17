@@ -1,0 +1,217 @@
+.filter__list {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+
+    @include mq (mobile-only) {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    @include mq (tablet) {
+        flex-wrap: nowrap;
+        align-items: baseline;
+    }
+
+    @include mq (desktop) {}
+}
+
+.filter__link {
+    margin-right: 8px;
+
+    &:last-child {
+        margin-right: 0px;
+    }
+
+    @include mq (mobile-only) {
+        margin-bottom: 15px;
+
+        &:nth-last-child(-n + 2) {
+            margin-bottom: 40px;
+        }
+    }
+
+    @include mq (tablet-only) {
+        margin-bottom: 30px;
+            &:not(:last-child) {
+            margin-right: 4px;}
+        }
+
+    @include mq (desktop) {
+        margin-bottom: 50px;
+    }
+}
+
+.projects__button {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--secondary-txt-cl);
+    border: none;
+    border-radius: 4px;
+    padding: 6px 22px;
+
+    transition: var(--animation);
+
+    &:hover,
+    &:focus {
+        color: #ffffff;
+        background-color: #2196f3;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+            0px 2px 2px rgba(0, 0, 0, 0.12);
+        }
+}
+
+.card-set {
+    @include mq (mobile) {
+       
+    }
+    
+    @include mq (tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+    
+    @include mq (desktop) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+}
+
+.card-set__item {
+    @include mq (mobile-only) {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    @include mq (tablet) {
+        flex-basis: calc((100% - 60px) / 2);
+        margin: 15px;
+    }
+    
+    @include mq (desktop) {
+
+        flex-basis: calc((100% - 90px) / 3);
+        margin: 15px;
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+    }
+
+        transition: var(--animation-mobile);
+    
+        @include mq (desktop) {
+            transition: var(--animation);
+        }
+}
+
+.project-img {
+    @include mq (mobile-only) {
+        width: 100%;
+    }
+    
+    @include mq (tablet) {
+        width: 354px;
+    }
+
+    @include mq (desktop) {
+        width: 370px;
+    }
+}
+
+.project__meta {
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+  
+    .project__link:hover &,
+    .project__link:focus & {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+            0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+}
+
+.project__meta--first {
+    @include mq (tablet-only) {
+            padding-bottom: 56px;
+        }
+   }
+
+.project__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--secondary-txt-cl);
+    padding-bottom: 4px;
+}
+
+.project__subtitle {
+    font-size: 16px;
+    line-height: 1.88;
+
+    letter-spacing: 0.03em;
+    color: var(--main-txt-cl);
+}
+
+.project__overlay {
+    position: relative;
+    
+    width: 100%;
+    height: auto;
+    
+    display: flex;
+    overflow: hidden;
+}
+
+.project__description {
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    color: rgba(255, 255, 255, 1);
+    
+    background-color: rgba(33, 150, 243, 0.9);
+    position: absolute;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: var(--animation-mobile);
+    @include mq (desktop) {
+        transition: var(--animation);
+    }
+
+    @include mq (mobile) {
+        padding: 77px 24px;
+    }
+    
+        @include mq (tablet) {
+        padding: 49px 24px 77px 24px;
+    }
+    
+        @include mq (desktop) {
+        padding: 63px 24px;
+    }
+
+    .project__link:hover & {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .project__link:focus & {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

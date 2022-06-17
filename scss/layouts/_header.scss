@@ -1,0 +1,212 @@
+.header {
+    border-bottom: 1px solid #ececec; 
+}
+
+.header-container {
+
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    position: relative;
+}
+
+.header__logo {
+
+    @include mq (tablet-only) {
+        margin-right: 88px;
+    }
+
+    @include mq (desktop) {
+        margin-right: 93px;
+    }
+}
+
+.menu-toggle {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    margin-left: auto;
+    cursor: pointer;
+
+    @include mq (tablet) {
+        display: none;
+    }
+
+    &:hover,
+    &:focus {
+        fill: var(--accent-cl);
+    }
+}
+
+.menu-toggle.js-close-menu {
+    position: absolute;
+    top: 10px;
+    right: 15px;  
+}
+
+.desktop-menu {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 767px) {
+        display: none;
+        }
+}
+
+
+.navigation__list {
+     display: flex;   
+}
+
+.navigation__link--current {
+    color: var(--accent-cl);
+    position: relative;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: rgba(33, 150, 243, 1);
+        border-radius: 2px;
+    
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        }
+}
+
+.navigation__link {
+    display: inline-block;
+
+    @include fonts (500, 14px, 1.17, 0.02em);
+
+    color: var(--secondary-txt-cl);
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition: var(--animation);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-cl);
+    } 
+}
+
+.navigation__item {
+
+    &:not(:last-child) {
+            margin-right: 50px;
+        }
+}
+
+.contacts-container {
+   
+    display: flex;
+    
+    justify-content: center;
+    align-items: flex-start;
+
+    @include mq (tablet) {
+    flex-direction: column;
+    }
+
+    @include mq (tablet) {
+        flex-direction: column;
+        margin-left: 84px;
+    }
+
+    @include mq (desktop) {
+        flex-direction: row;
+        margin-left: 305px;
+    }
+}
+
+.mail-group,
+.phone-group {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+   
+
+    color: var(--main-txt-cl);
+
+    @include mq(tablet) {
+    @include fonts (500, 12px, 1.17, 0.02em);
+        }
+
+    @include mq(desktop) {
+    @include fonts (500, 14px, 1.17, 0.02em);
+          }
+}
+
+.phone__link,
+.mail__link {
+    color: var(--main-txt-cl);
+    transition: var(--animation);
+}
+
+.mail__link {
+    @include mq (tablet) {
+            margin-bottom: 10px;
+        }
+
+    @include mq (desktop) {
+            margin-right: 30px;
+        }
+
+    &:hover,
+    &:focus {
+        color: var(--accent-cl);
+        outline: none;
+    }
+}
+
+.phone__link:hover,
+.phone__link:focus {
+    color: var(--accent-cl);
+    outline: none;
+}
+
+.mail__icon {
+    @include mq (tablet) {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+   
+    fill: var(--main-txt-cl);
+    transition: var(--animation);
+
+    @include mq(tablet-only) {
+            width: 14px;
+            height: 10px;
+        }
+
+    .mail__link:hover+&,
+    .mail__link:focus+&{
+        fill: var(--accent-cl);
+    }
+}
+
+.phone__icon {
+    @include mq (tablet) {
+            margin-right: 10px;
+        }
+
+    fill: var(--main-txt-cl);
+    transition: var(--animation);
+
+    @include mq(tablet-only) {
+            width: 10px;
+            height: 14px;
+        }
+
+    .phone__link:hover+&,
+    .phone__link:focus+& {
+        fill: var(--accent-cl);
+    }
+}

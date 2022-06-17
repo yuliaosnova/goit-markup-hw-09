@@ -1,0 +1,219 @@
+.footer {
+    background-color: #2f303a;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer-container {
+    @include mq (mobile-only) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    @include mq (tablet-only) {
+        padding-left: 76px;
+        padding-right: 89px;
+        text-align: center;
+    }
+    
+    @include mq (desktop) {
+        align-items: baseline;
+        display: flex;
+       
+    }
+}
+
+.flex-box {
+    display: flex;
+
+    @include mq (mobile-only) {
+        flex-direction: column;
+        
+    }
+
+    @include mq (tablet-only) {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 60px;
+    }
+    @include mq (desktop) {
+        justify-content: center;
+        align-items: baseline;
+
+    }
+}
+
+.info {
+
+    @include mq (mobile-only) {
+        margin-bottom: 60px;
+    }
+    
+    @include mq (tablet-only) {
+
+    }
+    
+    @include mq (desktop) {
+        margin-right: 70px;
+    }
+
+}
+
+.footer__logo {
+    margin-bottom: 20px;
+}
+
+.logo-text--inverse {
+    color: var(--white);
+}
+
+.info__address {
+    font-family: inherit;
+    font-style: normal;
+}
+
+.info__text {
+    color: var(--white);
+    display: inline-block;
+    margin-bottom: 9px;
+    line-height: 1.71;
+}
+
+.info__mail {
+    color: rgba(255, 255, 255, 0.6);
+    display: inline-block;
+    margin-bottom: 9px;
+    line-height: 1.71;
+
+    transition: var(--animation);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-cl);
+    }
+}
+
+.info__phone {
+    color: rgba(255, 255, 255, 0.6);
+    display: inline-block;
+    line-height: 1.71;
+
+    transition: var(--animation);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-cl);
+    }
+}
+
+.join {
+    @include mq (mobile-only) {
+        margin-bottom: 60px;
+    }
+    
+    @include mq (tablet-only) {}
+    
+    @include mq (desktop) {
+            margin-right: 93px;
+    }
+}
+
+.join__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.socials__link--inverse {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: #ffffff;
+
+    transition: var(--animation);
+}
+
+
+.sign-up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+    @include mq (desktop) {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+    }
+}
+
+.sign-up__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    
+    @include mq (desktop) {
+        margin-right: 12px;
+        margin-bottom: 0;
+        align-items: flex-start;}
+}
+
+.sign-up__label {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.sign-up__input {
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: rgba(47, 48, 58, 1);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    color: rgba(255, 255, 255, 0.6);
+
+    &::placeholder {
+        font-size: 16px;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6);
+        }
+
+    @include mq (mobile) {
+        width: 450px;
+    }
+    
+    @include mq (desktop) {
+        max-width: 358px;
+    }
+}
+
+
+.sign-up__icon {
+    margin-left: 10px;
+    fill: #FFFFFF;
+}
+
+.footer__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

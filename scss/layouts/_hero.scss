@@ -1,0 +1,99 @@
+.hero {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: var(--hero-bg);
+
+    //  Завантаження звичайного фонового зображення для мобільної версії
+    @include mq(mobile-only) {
+        background-image: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+         url(../images/hero-img/hero_sm.jpg);
+
+    // Завантаження ретінізованого 2х фонового зображення для мобільної версії
+        @include mq(retina) {
+            background-image: 
+                linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+            url(../images/hero-img/hero_sm@2x.jpg);
+        }
+    }
+    
+    // Завантаження звичайного фонового зображення для планшету
+    @include mq(tablet-only) {
+        background-image:
+            linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+         url(../images/hero-img/hero_md.jpg);
+         height: 400px;
+         padding-top: 118px;
+        
+    // Завантаження ретінізованого 2х фонового зображення для планшету
+    @include mq(retina) {
+        background-image: linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+        url(../images/hero-img/hero_md@2x.jpg);}
+    }
+
+    // Завантаження звичайного фонового зображення для десктопної версії
+    @include mq(desktop) {
+    background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/hero-img/hero_lg.jpg);
+        
+    // Завантаження ретінізованого 2х фонового зображення
+    @include mq(retina) {
+    background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/hero-img/hero_lg@2x.jpg);      
+        }
+    }
+
+   
+    @include mq(mobile-only) {
+        max-width: 480px;
+    
+        padding-top: 118px;
+        padding-bottom: 128px;
+        }
+
+    @include mq(tablet-only) {
+        max-width: 768px;
+        }
+
+    @include mq(desktop) {
+        max-width: 1600px;
+
+        padding-top: 200px;
+        padding-bottom: 200px;
+        }
+}
+
+.hero__title {
+    text-align: center;
+    color: var(--white);
+    display: block;
+    margin-bottom: 30px;
+
+    @include mq(mobile) {
+            @include fonts (900, 26px, 1.62, 0.06em, uppercase);
+        }
+   
+    @include mq(desktop) {
+             @include fonts (900, 44px, 1.36, 0.06em, uppercase);
+         }
+}
+
+.hero__button {
+    animation: vibrate-1 2s linear infinite both;
+}
