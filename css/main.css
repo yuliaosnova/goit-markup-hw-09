@@ -1857,6 +1857,17 @@ img {
   }
 }
 
+.project__link {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .card-set__item {
   -webkit-transition: var(--animation-mobile);
   transition: var(--animation-mobile);
@@ -1931,13 +1942,6 @@ img {
 
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .project__meta {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
@@ -2020,5 +2024,62 @@ img {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+.advantages {
+  background-color: #FFF5F6;
+  padding-right: 50px;
+  padding-bottom: 60px;
+  padding-left: 5px;
+}
+
+.advantages__amount {
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #D41443;
+  display: block;
+  margin-bottom: 18px;
+}
+
+.advantages__description {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #000000;
+  margin-bottom: 32px;
+}
+
+.advantages__amount--milk::before {
+  background-image: url("../images/advantages-icons/milk.png");
+  content: " ";
+  height: 50px;
+  width: 33px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.advantages__amount--apples::before {
+  background-image: url("../images/advantages-icons/apples.png");
+  content: " ";
+  height: 50px;
+  width: 50px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.advantages__amount--heart::before {
+  background-image: url("../images/advantages-icons/heart.png");
+  content: " ";
+  height: 50px;
+  width: 46px;
+  display: block;
+  margin-bottom: 16px;
 }
 /*# sourceMappingURL=main.css.map */
