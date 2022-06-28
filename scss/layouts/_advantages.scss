@@ -43,6 +43,9 @@
     color: #000000;
     margin-bottom: 32px;
 }
+.advantages__description--last {
+    margin-bottom: 0;
+}
 
 .advantages__amount--milk::before {
     background-image: url("../images/advantages-icons/milk.png");
@@ -53,7 +56,11 @@
     display: block;
     margin-bottom: 16px;
 
+    animation: changeColor 4000ms linear infinite;
 }
+// .advantages__amount--milk:hover::before {
+//     filter: hue-rotate(370deg) saturate(5);
+// }
 
 .advantages__amount--apples::before {
     background-image: url("../images/advantages-icons/apples.png");
@@ -61,15 +68,14 @@
     height: 50px;
     width: 50px;
     
-
     display: block;
-   
     margin-bottom: 16px;
+
+    animation: changeColor 4000ms linear infinite;
 }
-// .advantages__amount--apples {
-//     position: relative;
-//     text-align: right;
-// }
+// .advantages__amount--apples:hover::before {
+//     filter: hue-rotate(370deg) saturate(5);
+//  }
 
 .advantages__amount--heart::before {
     background-image: url("../images/advantages-icons/heart.png");
@@ -79,4 +85,23 @@
 
     display: block;
     margin-bottom: 16px;
+
+    animation: changeColor 4000ms linear infinite;
+}
+// .advantages__amount--heart:hover::before {
+//     filter: hue-rotate(370deg) saturate(5);
+// }
+
+@keyframes changeColor {
+    from {
+        filter: hue-rotate(365deg) saturate(1);
+    }
+
+    50% {
+        filter: hue-rotate(370deg) saturate(5);
+    }
+
+    to {
+        filter: hue-rotate(365deg) saturate(1);
+    }
 }

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Студия</title>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -675,24 +676,220 @@
           </ul>
         </div>
       </section>
-      <section class="advantages section" id="advantages">
+      <section class="advantages section" id="our-products">
         <div class="container advantages-container">
           <h2 class="section-title visually-hidden">Переваги</h2>
           <div class="advantages__thumb">
-            <p data-digits-counter class="advantages__amount advantages__amount--milk">721</p>
+            <p data-digits-counter class="advantages__amount advantages__amount--milk" id="milk" tabindex="1">721</p>
             <p class="advantages__description">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
           </div>
           <div class="advantages__thumb">
-            <p data-digits-counter class="advantages__amount advantages__amount--apples">16</p>
+            <p data-digits-counter class="advantages__amount advantages__amount--apples" id="apples" tabindex="1">16</p>
             <p class="kg">kg</p>
             <p class="advantages__description">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
           </div>
           <div class="advantages__thumb">
-            <p data-digits-counter class="advantages__amount advantages__amount--heart">84</p>
-            <p class="advantages__description">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
+            <p data-digits-counter class="advantages__amount advantages__amount--heart" id="heart" tabindex="1">84</p>
+            <p class="advantages__description advantages__description--last">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
           </div>
         </div>
       </section>
+      <section class="gallery__section section" id="gallery__section">
+        <div class="container gallery">
+            <h2 class="gallery__tittle visually-hidden">Gallery</h2>
+            
+              
+             <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 8 }'>
+                <div class="grid-item">
+                    <picture>
+                      <source srcset="
+                          images/gallery/pic1-ds.jpg    1x,
+                          images/gallery/pic1-ds@2x.jpg 2x
+                        " media="(min-width: 1200px)" type="image/jpeg" />
+                      <source srcset="
+                          images/gallery/pic1-tb.jpg    1x,
+                          images/gallery/pic1-tb@2x.jpg 2x
+                        " media="(min-width: 768px)" type="image/jpeg" />
+                      <source srcset="
+                          images/gallery/pic1-mb.jpg    1x,
+                          images/gallery/pic1-mb@2x.jpg 2x
+                        " media="(max-width: 767px)" type="image/jpeg" />
+                      <img src="images/gallery/pic1-mb.jpg" alt="photo ice cream" />
+                    </picture>
+                </div>
+               
+              
+                <div class="grid-item">
+                    <picture>
+                      <source srcset="
+                          images/gallery/pic2-ds.jpg    1x,
+                          images/gallery/pic2-ds@2x.jpg 2x
+                        " media="(min-width: 1200px)" type="image/jpeg" />
+                      <source srcset="
+                          images/gallery/pic2-tb.jpg    1x,
+                          images/gallery/pic2-tb@2x.jpg 2x
+                        " media="(min-width: 768px)" type="image/jpeg" />
+                      <source srcset="
+                          images/gallery/pic2-mb.jpg    1x,
+                          images/gallery/pic2-mb@2x.jpg 2x
+                        " media="(max-width: 767px)" type="image/jpeg" />
+                      <img src="images/gallery/pic2-mb.jpg" alt="photo ice cream" />
+                    </picture>
+                </div>
+                
+                <div class="grid-item">
+                    <picture>
+                      <source srcset="
+                          images/gallery/pic3-ds.jpg    1x,
+                          images/gallery/pic3-ds@2x.jpg 2x
+                        " media="(min-width: 1200px)" type="image/jpeg" />
+                      <source srcset="
+                          images/gallery/pic3-tb.jpg    1x,
+                          images/gallery/pic3-tb@2x.jpg 2x
+                        " media="(min-width: 768px)" type="image/jpeg" />
+                      <source srcset="
+                          images/gallery/pic3-mb.jpg    1x,
+                          images/gallery/pic3-mb@2x.jpg 2x
+                        " media="(max-width: 767px)" type="image/jpeg" />
+                      <img src="images/gallery/pic3-mb.jpg" alt="photo ice cream" />
+                    </picture>
+                </div>
+                
+              
+                <div class="grid-item">
+                  <picture>
+                    <source srcset="
+                        images/gallery/pic4-ds.jpg    1x,
+                        images/gallery/pic4-ds@2x.jpg 2x
+                      " media="(min-width: 1200px)" type="image/jpeg" />
+          
+                    <source srcset="
+                        images/gallery/pic4-tb.jpg    1x,
+                        images/gallery/pic4-tb@2x.jpg 2x
+                      " media="(min-width: 768px)" type="image/jpeg" />
+          
+                    <source srcset="
+                        images/gallery/pic4-mb.jpg    1x,
+                        images/gallery/pic4-mb@2x.jpg 2x
+                      " media="(max-width: 767px)" type="image/jpeg" />
+                    <img src="images/gallery/pic4-mb.jpg" alt="photo ice cream" />
+                  </picture>
+                </div>
+    
+                <div class="grid-item">
+                  <picture>
+                    <source srcset="
+                        images/gallery/pic5-ds.jpg    1x,
+                        images/gallery/pic5-ds@2x.jpg 2x
+                      " media="(min-width: 1200px)" type="image/jpeg" />
+          
+                    <source srcset="
+                        images/gallery/pic5-tb.jpg    1x,
+                        images/gallery/pic5-tb@2x.jpg 2x
+                      " media="(min-width: 768px)" type="image/jpeg" />
+          
+                    <source srcset="
+                        images/gallery/pic5-mb.jpg    1x,
+                        images/gallery/pic5-mb@2x.jpg 2x
+                      " media="(max-width: 767px)" type="image/jpeg" />
+                    <img src="images/gallery/pic5-mb.jpg" alt="photo ice cream" />
+                  </picture>
+                </div>
+    
+                <div class="grid-item">
+                  <picture>
+                    <source srcset="
+                        images/gallery/pic6-ds.jpg    1x,
+                        images/gallery/pic6-ds@2x.jpg 2x
+                      " media="(min-width: 1200px)" type="image/jpeg" />
+                    <source srcset="
+                        images/gallery/pic6-tb.jpg    1x,
+                        images/gallery/pic6-tb@2x.jpg 2x
+                      " media="(min-width: 768px)" type="image/jpeg" />
+          
+                    <source srcset="
+                        images/gallery/pic6-mb.jpg    1x,
+                        images/gallery/pic6-mb@2x.jpg 2x
+                      " media="(max-width: 767px)" type="image/jpeg" />
+                    <img src="images/gallery/pic6-mb.jpg" alt="photo ice cream" />
+                  </picture>
+                </div>
+    
+                <div class="grid-item">
+                  <picture>
+                    <source srcset="
+                        images/gallery/pic7-ds.jpg    1x,
+                        images/gallery/pic7-ds@2x.jpg 2x
+                      " media="(min-width: 1200px)" type="image/jpeg" />
+                    <source srcset="
+                        images/gallery/pic7-tb.jpg    1x,
+                        images/gallery/pic7-tb@2x.jpg 2x
+                      " media="(min-width: 768px)" type="image/jpeg" />
+                    <source srcset="
+                        images/gallery/pic7-mb.jpg    1x,
+                        images/gallery/pic7-mb@2x.jpg 2x
+                      " media="(max-width: 767px)" type="image/jpeg" />
+                    <img src="images/gallery/pic7-mb.jpg" alt="photo ice cream" />
+                  </picture>
+                </div>
+    
+                <div class="grid-item">
+                  <picture>
+                    <source srcset="
+                        images/gallery/pic8-ds.jpg    1x,
+                        images/gallery/pic8-ds@2x.jpg 2x
+                      " media="(min-width: 1200px)" type="image/jpeg" />
+                    <source srcset="
+                        images/gallery/pic8-tb.jpg    1x,
+                        images/gallery/pic8-tb@2x.jpg 2x
+                      " media="(min-width: 768px)" type="image/jpeg" />
+                    <source srcset="
+                        images/gallery/pic8-mb.jpg    1x,
+                        images/gallery/pic8-mb@2x.jpg 2x
+                      " media="(max-width: 767px)" type="image/jpeg" />
+                    <img src="images/gallery/pic8-mb.jpg" alt="photo ice cream" />
+                  </picture>
+                </div>
+    
+                <div class="grid-item">
+                  <picture>
+                    <source srcset="
+                        images/gallery/pic9-ds.jpg    1x,
+                        images/gallery/pic9-ds@2x.jpg 2x
+                      " media="(min-width: 1200px)" type="image/jpeg" />
+                    <source srcset="
+                        images/gallery/pic9-tb.jpg    1x,
+                        images/gallery/pic9-tb@2x.jpg 2x
+                      " media="(min-width: 768px)" type="image/jpeg" />
+                    <source srcset="
+                        images/gallery/pic9-mb.jpg    1x,
+                        images/gallery/pic9-mb@2x.jpg 2x
+                      " media="(max-width: 767px)" type="image/jpeg" />
+                    <img src="images/gallery/pic9-mb.jpg" alt="photo ice cream" />
+                  </picture>
+                </div>
+             
+                <div class="grid-item">
+                  <picture>
+                    <source srcset="
+                        images/gallery/pic10-ds.jpg    1x,
+                        images/gallery/pic10-ds@2x.jpg 2x
+                      " media="(min-width: 1200px)" type="image/jpeg" />
+                    <source srcset="
+                        images/gallery/pic10-tb.jpg    1x,
+                        images/gallery/pic10-tb@2x.jpg 2x
+                      " media="(min-width: 768px)" type="image/jpeg" />
+                    <source srcset="
+                        images/gallery/pic10-mb.jpg    1x,
+                        images/gallery/pic10-mb@2x.jpg 2x
+                      " media="(max-width: 767px)" type="image/jpeg" />
+                    <img src="images/gallery/pic10-mb.jpg" alt="photo ice cream" />
+                  </picture>
+                </div>
+             </div>
+             
+      </section>
+
     </main>
 <footer class="footer section">
       <div class="container footer-container">
@@ -786,5 +983,7 @@
     <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>
     <script src="./js/digits-counter.js"></script>
+    <script type="module" src=".js/masonry.pkgd.min.js"></script>
+    <script src="./js/app.js"></script>
   </body>
 </html>

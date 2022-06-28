@@ -2072,6 +2072,10 @@ img {
   margin-bottom: 32px;
 }
 
+.advantages__description--last {
+  margin-bottom: 0;
+}
+
 .advantages__amount--milk::before {
   background-image: url("../images/advantages-icons/milk.png");
   content: " ";
@@ -2079,6 +2083,8 @@ img {
   width: 33px;
   display: block;
   margin-bottom: 16px;
+  -webkit-animation: changeColor 4000ms linear infinite;
+          animation: changeColor 4000ms linear infinite;
 }
 
 .advantages__amount--apples::before {
@@ -2088,6 +2094,8 @@ img {
   width: 50px;
   display: block;
   margin-bottom: 16px;
+  -webkit-animation: changeColor 4000ms linear infinite;
+          animation: changeColor 4000ms linear infinite;
 }
 
 .advantages__amount--heart::before {
@@ -2097,5 +2105,37 @@ img {
   width: 46px;
   display: block;
   margin-bottom: 16px;
+  -webkit-animation: changeColor 4000ms linear infinite;
+          animation: changeColor 4000ms linear infinite;
+}
+
+@-webkit-keyframes changeColor {
+  from {
+    -webkit-filter: hue-rotate(365deg) saturate(1);
+            filter: hue-rotate(365deg) saturate(1);
+  }
+  50% {
+    -webkit-filter: hue-rotate(370deg) saturate(5);
+            filter: hue-rotate(370deg) saturate(5);
+  }
+  to {
+    -webkit-filter: hue-rotate(365deg) saturate(1);
+            filter: hue-rotate(365deg) saturate(1);
+  }
+}
+
+@keyframes changeColor {
+  from {
+    -webkit-filter: hue-rotate(365deg) saturate(1);
+            filter: hue-rotate(365deg) saturate(1);
+  }
+  50% {
+    -webkit-filter: hue-rotate(370deg) saturate(5);
+            filter: hue-rotate(370deg) saturate(5);
+  }
+  to {
+    -webkit-filter: hue-rotate(365deg) saturate(1);
+            filter: hue-rotate(365deg) saturate(1);
+  }
 }
 /*# sourceMappingURL=main.css.map */
